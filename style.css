@@ -1,0 +1,161 @@
+/* Umumiy uslublar */
+body {
+    font-family: 'Verdana';
+    margin: 0;
+    padding: 0;
+    background: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+h1 {
+    text-align: center;
+    color: forestgreen;
+    -webkit-text-stroke: 0.4px gold;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-shadow: 0 10px 150px;
+}
+
+h2 {
+    color: #34495e;
+    font-size: 1.5rem;
+}
+
+p {
+    color: #7f8c8d;
+    margin: 10px 0;
+}
+
+
+form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* width: 100%; */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    position: relative;
+    width: 97%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+input:focus {
+    border-color: blue;
+    outline: none;
+    box-shadow: 0 0 5px forestgreen,
+                0 0 8px forestgreen;
+}
+
+button {
+    background: #3498db;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 2px;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: forestgreen;
+    border: none;
+}
+
+
+a {
+    color: forestgreen;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background: #ecf0f1;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+ul li h2 {
+    margin: 0;
+}
+
+ul li button {
+    width: auto;
+    padding: 8px 15px;
+}
+
+.haqida {
+    display: flex;
+    width: 100%;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    /* border: 1px solid; */
+}
+.haqida span {
+    position: relative;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+    .haqida {
+        flex-direction: column;
+        align-items: baseline;
+        gap: 15px;
+    }
+}
