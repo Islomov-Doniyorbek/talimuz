@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mening Kurslarim</title>
+  <style>
+    /* Global styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to bottom, #f5f5f5, #eaeaea);
+  color: #333;
+}
+
+/* Header styles */
+.header {
+  background: linear-gradient(to right, #4caf50, #3e8e41);
+  color: white;
+  padding: 15px 0;
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.header .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.header .nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+.header .nav a:hover {
+  color: #ffeb3b;
+}
+.header .nav .active {
+  text-decoration: underline;
+}
+
+/* Main content styles */
+.main-content {
+  padding: 40px 20px;
+}
+.main-content .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.main-content h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #4caf50;
+}
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+.course-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.course-card h3 {
+  color: #4caf50;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+.course-card p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+.course-card .btn {
+  background: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+.course-card .btn:hover {
+  background: #45a049;
+}
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Footer styles */
+.footer {
+  background: #4caf50;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+}
+
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">Milliy Ta'lim Uz</h1>
+      <nav class="nav">
+        <a href="courses.html">Bosh sahifa</a>
+      </nav>
+    </div>
+  </header>
+  <main class="main-content">
+    <div class="container">
+      <h2>Mening Kurslarim</h2>
+      <div class="course-grid">
+        
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <p>&copy; 2024 Milliy Ta'lim Uz. Barcha huquqlar himoyalangan.</p>
+  </footer>
+  <script>
+    const courses = [
+    {
+        id: 1,
+        title: "Web Dasturlash Asoslari",
+        description: "HTML, CSS va JavaScript asoslari.",
+        dur: "60 dars",
+        lessons: [
+            { id: 1, title: "HTML Asoslari" },
+            { id: 2, title: "CSS Kirish" },
+            { id: 3, title: "JavaScriptga Kirish" }
+        ]
+    },
+    {
+        id: 2,
+        title: "Frontend Dasturlash",
+        description: "React va Vue.js bilan ish boshlash.",
+        dur: "48 dars",
+        lessons: [
+            { id: 1, title: "React Asoslari" },
+            { id: 2, title: "Vue.js Asoslari" },
+            { id: 3, title: "Angular asoslari" }
+        ]
+    },
+    {
+        id: 3,
+        title: "Backend Dasturlash",
+        description: "Node.js va Express bilan tanishuv.",
+        dur: "40 dars",
+        lessons: [
+            { id: 1, title: "Node.js Kirish" },
+            { id: 2, title: "Express bilan API yaratish" },
+            { id: 3, title: "Ma'lumotlar bazasi integratsiyasi" }
+        ]
+    },
+    {
+        id: 4,
+        title: "Android dasturlash",
+        description: "Android Studio va Cotlin dasturlash tili",
+        dur: "50 dars",
+        lessons: [
+            { id: 1, title: "Cotlin asoslari" },
+            { id: 2, title: "Cotlin va Java" },
+            { id: 3, title: "Java Spring" }
+        ]
+    },
+    {
+        id: 5,
+        title: "Oliy Matematika",
+        description: "Oliy darajadagi matematika ilmlari",
+        dur: "70 dars",
+        lessons: [
+            { id: 1, title: "Limitlar" },
+            { id: 2, title: "Hosilalar" },
+            { id: 3, title: "Integrallar" }
+        ]
+    },
+    ]
+const courseList = document.querySelector(".course-grid");
+if (courseList) {
+    let r = Math.floor(Math.random() * courses.length);
+    const li = document.createElement("div");
+    li.className = "course-card";
+    li.innerHTML = `
+        <h2>${courses[r].title}</h2>
+        <p>${courses[r].description}</p>
+        <p>${courses[r].dur}</p>
+        
+    `;
+    courseList.appendChild(li);
+    
+}
+
+  </script>
+</body>
+</html>

@@ -92,10 +92,11 @@ if (registerForm) {
 }
 
 
-const courseList = document.getElementById("courseList");
+const courseList = document.querySelector(".course-grid");
 if (courseList) {
     courses.forEach((course) => {
-        const li = document.createElement("li");
+        const li = document.createElement("div");
+        li.className = "course-card";
         let r = Math.floor(Math.random() * 250);
         li.innerHTML = `
             <h2>${course.title}</h2>
